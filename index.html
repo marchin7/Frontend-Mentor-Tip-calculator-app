@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <main class="calculator">
+    <div class="header">
+      <h1>SPLITTER</h1>
+    </div>
+    <div class="content">
+      <div class="calculations">
+        <div class="bill">
+          <div class="label">Bill</div>
+          <label class="dollar">
+            <img src="images/icon-dollar.svg">
+          </label>
+          <input type="text" placeholder="0">
+        </div>
+        <div class="tip">
+          <div class="label">Select Tip %</div>
+          <div class="tip-btns">
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <input type="text" placeholder="Custom">
+          </div>
+        </div>
+        <div class="people">
+          <div class="label">Number of People<span class="alert">Can't be zero</span></div>
+          <div>
+            <label class="person">
+              <img src="images/icon-person.svg">
+            </label>
+            <input type="text" placeholder="0">
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="result">
+        <div class="tip-amount">
+          <div class="tip-amount-des">
+            <div class="result-label-top">Tip Amount</div>
+            <div class="result-label-bottom">/ person</div>
+          </div>
+          <div class="tip-amount-result">$4.27</div>
+        </div>
+        <div class="total">
+          <div class="tip-amount-des">
+            <div class="result-label-top">Total</div>
+            <div class="result-label-bottom">/ person</div>
+          </div>
+          <div class="tip-amount-result">$32.79</div>
+        </div>
+        <div class="reset">
+          <button>RESET</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <!--
+  Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset
+  -->
+  
+</body>
+</html>
