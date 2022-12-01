@@ -26,17 +26,17 @@
           <label class="dollar">
             <img src="images/icon-dollar.svg">
           </label>
-          <input type="text" placeholder="0" id="bill" maxlength="8">
+          <input type="number" placeholder="0" id="bill" maxlength="8" oninput="billFunction(this.value)" >
         </div>
         <div class="tip">
           <div class="label">Select Tip %</div>
           <div class="tip-btns">
-            <button id="btn" value="5">5%</button>
-            <button id="btn" value="10">10%</button>
-            <button id="btn" value="15">15%</button>
-            <button id="btn" value="25">25%</button>
-            <button id="btn" value="50">50%</button>
-            <input type="text" placeholder="Custom" id="custom">
+            <button id="btn" class="btn" value="5">5%</button>
+            <button id="btn" class="btn" value="10">10%</button>
+            <button id="btn" class="btn" value="15">15%</button>
+            <button id="btn" class="btn" value="25">25%</button>
+            <button id="btn" class="btn" value="50">50%</button>
+            <input type="number" placeholder="Custom" id="custom" maxlength="4" oninput="customFunction(this.value)">
           </div>
         </div>
         <div class="people">
@@ -45,7 +45,7 @@
             <label class="person">
               <img src="images/icon-person.svg">
             </label>
-            <input type="text" placeholder="0" id="people" oninput="clearAlert(this.value)">
+            <input type="number" placeholder="0" id="people" oninput="peopleFunction(this.value)" maxlength="3">
             <span></span>
           </div>
         </div>
@@ -76,7 +76,6 @@
 
   <!--
   Bill
-
   Select Tip %
   5%
   10%
@@ -84,15 +83,11 @@
   25%
   50%
   Custom
-
   Number of People
-
   Tip Amount
   / person
-
   Total
   / person
-
   Reset
   -->
   

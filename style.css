@@ -1,260 +1,270 @@
 :root {
---Strong-cyan: hsl(172, 67%, 45%);
---clr-strong-medium-cyan: rgba(38, 192, 171, 0.4);
-
---Very-dark-cyan: hsl(183, 100%, 15%);
---Dark-grayish-cyan: hsl(186, 14%, 43%);
---Grayish-cyan: hsl(184, 14%, 56%);
---Light-grayish-cyan: hsl(185, 41%, 84%);
---Very-light-grayish-cyan: hsl(189, 41%, 97%);
---White: hsl(0, 0%, 100%);
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: space mono, sans-serif;
-    height: 100%;
-    min-height: 100vh;
-    display: grid;
-    place-content: center;
-    background-color: var(--Light-grayish-cyan);
-}
-
-input {
-    width: 100%;
-    height: 48px;
-    border-radius: 4px;
-    font-family: inherit;
-    border: none;
-    direction: rtl;
-    font-size: 24px;
-    font-weight: 700;
-    padding-right: 15px;
-    color: var(--Very-dark-cyan);
-    background-color: var(--Very-light-grayish-cyan);
-    outline-color: var(--Strong-cyan);
-}
-
-.label {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 6px;
-    color: var(--Grayish-cyan);
-}
-
-.people,
-.bill {
-    position: relative;
-}
-
-.people input {
-    margin-bottom: 1.5rem;
-}
-.bill input {
-    margin-bottom: 2rem;
-}
-
-.person,
-.dollar {
-    position: absolute;
-    left: 15px;
-    transform: translateY(50%);
-}
-
-input::placeholder {
-    color: var(--Grayish-cyan);
-    font-family: inherit;
-    font-size: 24px;
-    text-align: right;
-    font-weight: bold;
-}
-
-button {
-    width: 100%;
-    height: 48px;
-    border-radius: 4px;
-    border: 0;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: inherit;
-    background-color: var(--Very-dark-cyan);
-    color: var(--White);
-    cursor: pointer;
-}
-
-.calculator {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.header {
-    padding: 1rem 0rem 2rem 0rem;
-
-}
-
-.content {
-    background-color: var(--White);
-    border-radius: 20px;
-    padding: 1.5rem;
-}
-
-.calculations {
-    padding: 0.5rem;
-}
-
-h1 {
-    width: 99px;
-    overflow-wrap: break-word;
-    font-size: 1.5rem;
-    letter-spacing: 10px;
-    color: var(--Very-dark-cyan);
-}
-
-.tip-btns {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(2, 150px);
-    margin: 1rem 0rem 2rem 0rem;
-}
-
-button:hover {
-    background-color: var(--clr-strong-medium-cyan);
-    color: var(--Very-dark-cyan);
-}
-button:focus {
-    background-color: var(--Strong-cyan);
-    color: var(--Very-dark-cyan);
-}
-
-.tip button {
-    height: 48px;
-    transition: all 0.2s ease-in-out;
-}
-
-.alert {
-    color: rgb(212, 138, 0);
-    margin-left: 30px;
-    opacity: 0;
-
-}
-
-.result {
-    display: grid;
-    grid-template-columns: 1fr;
-    place-content: center;
-    padding: 2.2rem 1.5rem 1.5rem 1.5rem;
-    border-radius: 8px;
-    background-color: var(--Very-dark-cyan);
-}
-
-.tip-amount,
-.total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.tip-amount-result {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--Strong-cyan);
-}
-
-.result-label-top {
-    font-size: 16px;
-    font-weight: 700;
-    color: white;
-}
-
-.result-label-bottom {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--Grayish-cyan);
-}
-
-.total {
-    margin: 1.5rem 0rem 1.8rem 0rem;
-}
-
-.reset-button {
-    font-size: 20px;
-    background-color: var(--clr-strong-medium-cyan);
-    color: var(--Very-dark-cyan);
-    opacity: 0.5;
-    transition: all 0.2s ease-in-out;
-}
-
-.reset-button:hover {
-    background-color: rgb(134, 218, 206);
-    color: var(--Very-dark-cyan);
-    opacity: 1;
-}
-
-.reset-button:focus {
-    background-color: var(--Strong-cyan);
-    color: var(--Very-dark-cyan);
-    opacity: 1;
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --clr-strong-medium-cyan: rgba(38, 192, 171, 0.4);
+  
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  }
+  
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+  
+  body {
+      font-family: space mono, sans-serif;
+      height: 100%;
+      min-height: 100vh;
+      display: grid;
+      place-content: center;
+      background-color: var(--Light-grayish-cyan);
+  }
+  
+  input {
+      width: 100%;
+      height: 48px;
+      border-radius: 4px;
+      font-family: inherit;
+      border: none;
+      direction: rtl;
+      font-size: 24px;
+      font-weight: 700;
+      padding-right: 15px;
+      color: var(--Very-dark-cyan);
+      background-color: var(--Very-light-grayish-cyan);
+      outline-color: var(--Strong-cyan);
+  }
  
-}
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      display: none;
+  }
+  
+  .label {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--Grayish-cyan);
+  }
+  
+  .people,
+  .bill {
+      position: relative;
+  }
+  
+  .people input {
+      margin-bottom: 1.5rem;
+  }
+  .bill input {
+      margin-bottom: 2rem;
+  }
+  
+  .person,
+  .dollar {
+      position: absolute;
+      left: 15px;
+      transform: translateY(50%);
+  }
+  
+  input::placeholder {
+      color: var(--Grayish-cyan);
+      font-family: inherit;
+      font-size: 24px;
+      text-align: right;
+      font-weight: bold;
+  }
+  
+  button {
+      width: 100%;
+      height: 48px;
+      border-radius: 4px;
+      border: 0;
+      font-size: 24px;
+      font-weight: 700;
+      font-family: inherit;
+      background-color: var(--Very-dark-cyan);
+      color: var(--White);
+      cursor: pointer;
+  }
+  
+  .calculator {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+  }
+  
+  .header {
+      padding: 1rem 0rem 2rem 0rem;
+  
+  }
+  
+  .content {
+      background-color: var(--White);
+      border-radius: 20px;
+      padding: 1.5rem;
+  }
+  
+  .calculations {
+      padding: 0.5rem;
+  }
+  
+  h1 {
+      width: 99px;
+      overflow-wrap: break-word;
+      font-size: 1.5rem;
+      letter-spacing: 10px;
+      color: var(--Very-dark-cyan);
+  }
+  
+  .tip-btns {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, 150px);
+      margin: 1rem 0rem 2rem 0rem;
+  }
 
-@media only screen and (min-width: 920px) {
+  
+  .btn {
+      height: 48px;
+      transition: all 0.2s ease-in-out;
+  }
+  .btn.active {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+  }
 
-    .header {
-        padding-bottom: 4.5rem;
-        padding-top: 4rem;
-    
-    }
+  .btn:hover {
+    background-color: rgb(170, 222, 215);
+    color: var(--Very-dark-cyan);
+  }
 
-    .content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 2rem;
-    }
-
-    .tip-btns {
-        grid-template-columns: repeat(3, 117px);
-        margin: 1rem 0rem 2.5rem 0rem;
-    }
-
-    .content {
-        padding: 2rem;
-    }
-    .calculations {
-        padding: 0.8rem;
-    }
-
-    
-    .people input {
-        margin-bottom: 0.2rem;
-    }
-    .bill input {
-        margin-bottom: 2.4rem;
-    }
-
-    .alert {
-        margin-left: 6rem;
-    }
-
-    .tip-amount-result {
-        font-size: 3rem;
-    }
-
-    .result {
-        display: block;
-        padding: 2.5rem;
-    }
-
-    .total {
-        margin: 1.5rem 0rem 7.5rem 0rem;
-    }
-
-}
+  .btn:focus {
+    background-color: var(--Strong-cyan);
+  }
+ 
+  .alert {
+      color: rgb(212, 138, 0);
+      margin-left: 30px;
+      opacity: 0;
+  
+  }
+  
+  .result {
+      display: grid;
+      grid-template-columns: 1fr;
+      place-content: center;
+      padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+      border-radius: 8px;
+      background-color: var(--Very-dark-cyan);
+  }
+  
+  .tip-amount,
+  .total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  
+  .tip-amount-result {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--Strong-cyan);
+  }
+  
+  .result-label-top {
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+  }
+  
+  .result-label-bottom {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--Grayish-cyan);
+  }
+  
+  .total {
+      margin: 1.5rem 0rem 1.8rem 0rem;
+  }
+  
+  .reset-button {
+      font-size: 20px;
+      background-color: var(--clr-strong-medium-cyan);
+      color: var(--Very-dark-cyan);
+      opacity: 0.5;
+      transition: all 0.2s ease-in-out;
+  }
+  
+  .reset-button:hover {
+      background-color: rgb(134, 218, 206);
+      color: var(--Very-dark-cyan);
+      opacity: 1;
+  }
+  
+  .reset-button:focus {
+      background-color: var(--Strong-cyan);
+      color: var(--Very-dark-cyan);
+      opacity: 1;
+   
+  }
+  
+  @media only screen and (min-width: 920px) {
+  
+      .header {
+          padding-bottom: 4.5rem;
+          padding-top: 4rem;
+      
+      }
+  
+      .content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 2rem;
+      }
+  
+      .tip-btns {
+          grid-template-columns: repeat(3, 117px);
+          margin: 1rem 0rem 2.5rem 0rem;
+      }
+  
+      .content {
+          padding: 2rem;
+      }
+      .calculations {
+          padding: 0.8rem;
+      }
+  
+      
+      .people input {
+          margin-bottom: 0.2rem;
+      }
+      .bill input {
+          margin-bottom: 2.4rem;
+      }
+  
+      .alert {
+          margin-left: 6rem;
+      }
+  
+      .tip-amount-result {
+          font-size: 3rem;
+      }
+  
+      .result {
+          display: block;
+          padding: 2.5rem;
+      }
+  
+      .total {
+          margin: 1.5rem 0rem 7.5rem 0rem;
+      }
+  
+  }
