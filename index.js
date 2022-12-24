@@ -1,4 +1,4 @@
-const tipButtons = document.querySelectorAll('#btn');
+const tipButtons = document.querySelectorAll('.btn');
 const billElement = document.getElementById('bill');
 const customElement = document.getElementById('custom');
 const peopleElement = document.getElementById('people');
