@@ -45,7 +45,7 @@ function render(){
     }
     else{
         totalElement.innerText = '$0.00';
-        tipAmount.innerText = '$0.00';
+        tipAmountElement.innerText = '$0.00';
     }
 }
 
