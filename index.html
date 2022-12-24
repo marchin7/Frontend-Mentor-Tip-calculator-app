@@ -27,7 +27,7 @@
             <span class="dollar">
               <img class="dollar-img" src="images/icon-dollar.svg" alt="us dollar">
             </span>
-            <input class="bill-input" id="bill" type="text" placeholder="0" maxlength="7">
+            <input class="bill-input" id="bill" type="text" placeholder="0" maxlength="7" onkeypress="return event.charCode>=46 && event.charCode<=57">
           </div>
           <div class="tip">
             <label class="label">Select Tip %</label>
@@ -37,7 +37,7 @@
               <button id="btn" class="btn" value="15">15%</button>
               <button id="btn" class="btn" value="25">25%</button>
               <button id="btn" class="btn" value="50">50%</button>
-              <input type="text" placeholder="Custom" id="custom" class="custom-input" maxlength="5">
+              <input type="text" placeholder="Custom" id="custom" class="custom-input" maxlength="5" onkeypress="return event.charCode>=46 && event.charCode<=57">
               <img class="dollar-custom" id="dollar-custom" src="images/icon-dollar.svg" alt="us dollar">
             </div>
           </div>
@@ -46,7 +46,7 @@
             <span class="person">
               <img class="person-img" src="images/icon-person.svg" alt="person">
             </span>
-              <input class="people-input" type="text" placeholder="0" id="people" maxlength="3">
+              <input class="people-input" type="text" placeholder="0" id="people" maxlength="3" onkeypress="return event.charCode>=48 && event.charCode<=57">
           </div>
         </div>
         <div class="result">

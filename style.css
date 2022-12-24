@@ -260,6 +260,7 @@
 
         .header {
             padding-bottom: 5rem;
+            width: 105px;
         }
     }
 
@@ -320,6 +321,10 @@
 
     .total-per-person {
         margin-bottom: 1.5625rem;
+    }
+
+    .header {
+        width: 105px;
     }
 
 
