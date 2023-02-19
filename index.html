@@ -1,92 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="index.js" defer></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-</head>
-<body>
-  <main class="main">
-    <div class="header">
-      <h1>SPLITTER</h1>
-    </div>
-    <div class="calculator">
-      <form class="form" id="form">
-        <div class="calculations">
-          <div class="bill">
-            <label class="label" for="bill">Bill</label>
-            <span class="dollar">
-              <img class="dollar-img" src="images/icon-dollar.svg" alt="us dollar">
-            </span>
-            <input class="bill-input" id="bill" type="text" placeholder="0" maxlength="7" onkeypress="return event.charCode>=46 && event.charCode<=57">
-          </div>
-          <div class="tip">
-            <label class="label">Select Tip %</label>
-            <div class="tip-btns">
-              <button class="btn" value="5">5%</button>
-              <button class="btn" value="10">10%</button>
-              <button class="btn" value="15">15%</button>
-              <button class="btn" value="25">25%</button>
-              <button class="btn" value="50">50%</button>
-              <input type="text" placeholder="Custom" id="custom" class="custom-input" maxlength="5" onkeypress="return event.charCode>=46 && event.charCode<=57">
-              <img class="dollar-custom" id="dollar-custom" src="images/icon-dollar.svg" alt="us dollar">
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <div class="header">
+        <h1>SPLITTER</h1>
+      </div>
+      <div class="calculator">
+        <form class="form" id="form">
+          <div class="calculations">
+            <div class="bill">
+              <label class="label" for="bill">Bill</label>
+              <span class="dollar">
+                <img
+                  class="dollar-img"
+                  src="images/icon-dollar.svg"
+                  alt="us dollar"
+                />
+              </span>
+              <input
+                class="bill-input"
+                id="bill"
+                type="text"
+                placeholder="0"
+                maxlength="7"
+                onkeypress="return event.charCode>=46 && event.charCode<=57"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+              />
             </div>
-          </div>
-          <div class="people">
-            <label class="label" for="people">Number of People<span class="error-msg" id="error-msg">Can't be zero</span></label>
-            <span class="person">
-              <img class="person-img" src="images/icon-person.svg" alt="person">
-            </span>
-              <input class="people-input" type="text" placeholder="0" id="people" maxlength="3" onkeypress="return event.charCode>=48 && event.charCode<=57">
-          </div>
-        </div>
-        <div class="result">
-          <div class="result-inner">
-            <div class="tip-amount-per-person">
-              <div class="result-title">
-                <div class="result-title-one">Tip Amount</div>
-                <div class="result-title-two">/ person</div>
+            <div class="tip">
+              <label class="label">Select Tip %</label>
+              <div class="tip-btns">
+                <button class="btn" value="5">5%</button>
+                <button class="btn" value="10">10%</button>
+                <button class="btn" value="15">15%</button>
+                <button class="btn" value="25">25%</button>
+                <button class="btn" value="50">50%</button>
+                <input
+                  type="text"
+                  placeholder="Custom"
+                  id="custom"
+                  class="custom-input"
+                  maxlength="5"
+                  onkeypress="return event.charCode>=46 && event.charCode<=57"
+                />
+                <img
+                  class="dollar-custom"
+                  id="dollar-custom"
+                  src="images/icon-dollar.svg"
+                  alt="us dollar"
+                />
               </div>
-              <div class="result-value" id="tipAmount">$0.00</div>
             </div>
-            <div class="total-per-person">
-              <div class="result-title">
-                <div class="result-title-one">Total</div>
-                <div class="result-title-two">/ person</div>
-              </div>
-              <div class="result-value" id="total">$0.00</div>
-            </div>
-            <div class="reset-btn-container">
-              <button class="reset-btn" type="button" id="resetBtn">RESET</button>
+            <div class="people">
+              <label class="label" for="people"
+                >Number of People<span class="error-msg" id="error-msg"
+                  >Can't be zero</span
+                ></label
+              >
+              <span class="person">
+                <img
+                  class="person-img"
+                  src="images/icon-person.svg"
+                  alt="person"
+                />
+              </span>
+              <input
+                class="people-input"
+                type="text"
+                placeholder="0"
+                id="people"
+                maxlength="3"
+                onkeypress="return event.charCode>=48 && event.charCode<=57"
+              />
             </div>
           </div>
-        </div>    
-      </form>
-    </div>
-  </main>
-</body>
+          <div class="result">
+            <div class="result-inner">
+              <div class="tip-amount-per-person">
+                <div class="result-title">
+                  <div class="result-title-one">Tip Amount</div>
+                  <div class="result-title-two">/ person</div>
+                </div>
+                <div class="result-value" id="tipAmount">$0.00</div>
+              </div>
+              <div class="total-per-person">
+                <div class="result-title">
+                  <div class="result-title-one">Total</div>
+                  <div class="result-title-two">/ person</div>
+                </div>
+                <div class="result-value" id="total">$0.00</div>
+              </div>
+              <div class="reset-btn-container">
+                <button class="reset-btn" type="button" id="resetBtn">
+                  RESET
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
