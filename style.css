@@ -45,10 +45,22 @@ input {
     font-weight: 700;
     font-family: inherit;
     color: var(--clr-Very-dark-cyan);
-    outline-color: var(--clr-Strong-cyan);
     background-color: var(--clr-Very-light-grayish-cyan);
     caret-color: var(--clr-Strong-cyan);
     padding-right: 0.9375rem;
+    /*outline-color: var(--clr-Strong-cyan);*/
+    outline: none;
+}
+
+input:focus {
+    border: 2px solid;
+    border-color: var(--clr-Strong-cyan);
+}
+
+.show-error-msg {
+    outline-style: 1px solid;
+    outline-color: var(--clr-orange-red) !important;
+    border: 2px solid hsl(39, 100%, 42%) !important;
 }
 
 input::placeholder {
@@ -136,11 +148,6 @@ h1 {
 .people-input {
     height: 3rem;
     margin: 0.3125rem 0rem 2rem 0rem;
-}
-
-.show-error-msg {
-    outline-color: var(--clr-orange-red);
-    border: 2px solid hsl(39, 100%, 42%);
 }
 
 .tip-btns {
